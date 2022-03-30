@@ -11,4 +11,25 @@
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ConnectionDb</servlet-name>
+        <servlet-class>com.example.LoginServlet.model.ConnectionDB</servlet-class>
+        <init-param>
+            <param-name>url</param-name>
+            <param-value>jdbc:mysql://127.0.0.1:3306/personinfo</param-value>
+        </init-param>
+        <init-param>
+            <param-name>userName</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>yourpassword</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConnectionDb</servlet-name>
+        <url-pattern>/connection</url-pattern>
+    </servlet-mapping>
 </web-app>
